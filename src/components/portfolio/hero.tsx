@@ -4,6 +4,7 @@ import { Mail, Linkedin } from "lucide-react";
 import data from "@/lib/portfolio-data.json";
 import Cubes from "./cubes";
 import './cubes.css';
+import TextPressure from "./text-pressure";
 
 type HeroProps = {
   name: string;
@@ -33,9 +34,20 @@ export function Hero({ name }: HeroProps) {
 
       <div className="container relative z-10 px-4 md:px-6">
         <div className="flex flex-col items-center text-center">
-          <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none">
-            {name}
-          </h1>
+            <div className="h-24 md:h-32 lg:h-40 w-full">
+              <TextPressure
+                text={name}
+                flex={true}
+                alpha={false}
+                stroke={false}
+                width={true}
+                weight={true}
+                italic={true}
+                textColor="hsl(var(--foreground))"
+                strokeColor="hsl(var(--primary))"
+                minFontSize={36}
+              />
+            </div>
           <p className="mt-4 max-w-[700px] text-lg text-foreground/80 md:text-xl">
             Web Developer, DevOps Engineer, and Game Developer. I create
             beautiful, high-performance digital experiences.
