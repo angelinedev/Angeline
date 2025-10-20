@@ -1,10 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 import { Mail, Linkedin } from "lucide-react";
 import data from "@/lib/portfolio-data.json";
 import Cubes from "./cubes";
 import './cubes.css';
-import TextTrail from "./text-trail";
 
 type HeroProps = {
   name: string;
@@ -29,15 +27,9 @@ export function Hero({ name }: HeroProps) {
         </div>
         
         <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center px-4 md:px-6">
-            <div className="w-full h-48">
-              <TextTrail
-                text={name}
-                fontFamily="Space Grotesk"
-                fontWeight="700"
-                textColor="hsl(var(--primary))"
-                backgroundColor="transparent"
-              />
-            </div>
+            <h1 className="font-headline text-5xl font-bold tracking-tighter text-primary sm:text-6xl md:text-7xl lg:text-8xl">
+              {name}
+            </h1>
             <p className="mt-4 max-w-[700px] text-lg text-foreground/80 md:text-xl">
                 Web Developer, DevOps Engineer, and Game Developer. I create
                 beautiful, high-performance digital experiences.
