@@ -259,7 +259,7 @@ const TextTrail = ({
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
 
-      const refSize = 250;
+      const refSize = 350;
       ctx.font = `${fontWeight} ${refSize}px ${fontFamily}`;
       const width = ctx.measureText(text).width;
       ctx.font = `${fontWeight} ${(refSize * max) / width}px ${fontFamily}`;

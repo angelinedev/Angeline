@@ -39,6 +39,7 @@ export function Hero({ name }: HeroProps) {
                 text={name}
                 textColor="hsl(var(--primary))"
                 backgroundColor="transparent"
+                supersample={4}
               />
             </div>
           <p className="mt-4 max-w-[700px] text-lg text-foreground/80 md:text-xl">
