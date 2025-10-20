@@ -85,6 +85,18 @@ const Cubes = ({
     },
     [radius, maxAngle, enterDur, leaveDur, easing]
   );
+  
+  const resetAll = useCallback(() => {
+    if (!sceneRef.current) return;
+    sceneRef.current.querySelectorAll('.cube').forEach(cube =>
+      gsap.to(cube, {
+        duration: leaveDur,
+        rotateX: 0,
+        rotateY: 0,
+        ease: 'power3.out'
+      })
+    );
+  }, [leaveDur]);
 
   const onPointerMove = useCallback(
     (e: PointerEvent) => {
@@ -103,23 +115,13 @@ const Cubes = ({
 
       idleTimerRef.current = setTimeout(() => {
         userActiveRef.current = false;
-        resetAll();
+        if (!autoAnimate) {
+            resetAll();
+        }
       }, 3000);
     },
-    [gridSize, tiltAt]
+    [gridSize, tiltAt, autoAnimate, resetAll]
   );
-
-  const resetAll = useCallback(() => {
-    if (!sceneRef.current) return;
-    sceneRef.current.querySelectorAll('.cube').forEach(cube =>
-      gsap.to(cube, {
-        duration: leaveDur,
-        rotateX: 0,
-        rotateY: 0,
-        ease: 'power3.out'
-      })
-    );
-  }, [leaveDur]);
 
   const onTouchMove = useCallback(
     (e: TouchEvent) => {
