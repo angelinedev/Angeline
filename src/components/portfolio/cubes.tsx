@@ -103,6 +103,7 @@ const Cubes = ({
 
       idleTimerRef.current = setTimeout(() => {
         userActiveRef.current = false;
+        resetAll();
       }, 3000);
     },
     [gridSize, tiltAt]
@@ -236,7 +237,9 @@ const Cubes = ({
       }
       simRAFRef.current = requestAnimationFrame(loop);
     };
-    simRAFRef.current = requestAnimationFrame(loop);
+    if(autoAnimate) {
+        simRAFRef.current = requestAnimationFrame(loop);
+    }
     return () => {
       if (simRAFRef.current != null) {
         cancelAnimationFrame(simRAFRef.current);

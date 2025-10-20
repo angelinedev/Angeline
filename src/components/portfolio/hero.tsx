@@ -21,7 +21,7 @@ export function Hero({ name }: HeroProps) {
                 faceColor="hsl(var(--background))"
                 rippleColor="hsl(var(--primary))"
                 rippleSpeed={1.2}
-                autoAnimate={true}
+                autoAnimate={false}
                 rippleOnClick={true}
             />
         </div>
