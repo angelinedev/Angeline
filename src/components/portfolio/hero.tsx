@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Linkedin } from "lucide-react";
 import data from "@/lib/portfolio-data.json";
+import Cubes from "./cubes";
+import './cubes.css';
 
 type HeroProps = {
   name: string;
@@ -9,6 +11,19 @@ type HeroProps = {
 export function Hero({ name }: HeroProps) {
   return (
     <section className="relative w-full py-20 md:py-32 lg:py-40 overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full">
+            <Cubes 
+                gridSize={12}
+                maxAngle={45}
+                radius={3.5}
+                borderStyle="1px solid hsl(var(--primary) / 0.2)"
+                faceColor="hsl(var(--background))"
+                rippleColor="hsl(var(--primary))"
+                rippleSpeed={1.2}
+                autoAnimate={true}
+                rippleOnClick={true}
+            />
+        </div>
         <div className="absolute top-0 left-0 w-full h-full bg-grid-white/[0.05] [mask-image:linear-gradient(to_bottom,white_5%,transparent_50%)]"></div>
         <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
         <div className="absolute -z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
