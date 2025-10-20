@@ -12,7 +12,7 @@ type HeroProps = {
 export function Hero({ name }: HeroProps) {
   const subtitle = "Web Developer, DevOps Engineer, and Game Developer. I create beautiful, high-performance digital experiences.";
   return (
-    <section className="relative w-full h-[50svh] min-h-[400px] md:h-[60svh] lg:h-[70svh] overflow-hidden">
+    <section className="relative w-full h-dvh overflow-hidden">
         <div className="absolute inset-0 z-0">
             <Cubes 
                 gridSize={12}
