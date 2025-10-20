@@ -4,6 +4,7 @@ import { Mail, Linkedin } from "lucide-react";
 import data from "@/lib/portfolio-data.json";
 import Cubes from "./cubes";
 import './cubes.css';
+import TextTrail from "./text-trail";
 
 type HeroProps = {
   name: string;
@@ -28,9 +29,15 @@ export function Hero({ name }: HeroProps) {
         </div>
         
         <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center px-4 md:px-6">
-            <h1 className="font-headline text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-primary">
-                {name}
-            </h1>
+            <div className="w-full h-48">
+              <TextTrail
+                text={name}
+                fontFamily="Space Grotesk"
+                fontWeight="700"
+                textColor="hsl(var(--primary))"
+                backgroundColor="transparent"
+              />
+            </div>
             <p className="mt-4 max-w-[700px] text-lg text-foreground/80 md:text-xl">
                 Web Developer, DevOps Engineer, and Game Developer. I create
                 beautiful, high-performance digital experiences.
