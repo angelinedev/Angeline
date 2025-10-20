@@ -36,9 +36,6 @@ export function Skills({ skills }: SkillsProps) {
 
   return (
     <section id="skills" className="py-16 md:py-24 bg-background relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full z-0">
-        <LaserFlow color="hsl(var(--primary))" />
-      </div>
       <div className="container px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center text-center mb-12">
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">
