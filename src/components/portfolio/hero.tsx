@@ -4,7 +4,7 @@ import { Mail, Linkedin } from "lucide-react";
 import data from "@/lib/portfolio-data.json";
 import Cubes from "./cubes";
 import './cubes.css';
-import TextPressure from "./text-pressure";
+import TextTrail from "./text-trail";
 
 type HeroProps = {
   name: string;
@@ -35,17 +35,10 @@ export function Hero({ name }: HeroProps) {
       <div className="container relative z-10 px-4 md:px-6">
         <div className="flex flex-col items-center text-center">
             <div className="h-24 md:h-32 lg:h-40 w-full">
-              <TextPressure
+               <TextTrail 
                 text={name}
-                flex={true}
-                alpha={false}
-                stroke={false}
-                width={true}
-                weight={true}
-                italic={true}
-                textColor="hsl(var(--foreground))"
-                strokeColor="hsl(var(--primary))"
-                minFontSize={36}
+                textColor="hsl(var(--primary))"
+                backgroundColor="hsl(var(--background))"
               />
             </div>
           <p className="mt-4 max-w-[700px] text-lg text-foreground/80 md:text-xl">
