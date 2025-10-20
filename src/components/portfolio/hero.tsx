@@ -4,7 +4,6 @@ import { Mail, Linkedin } from "lucide-react";
 import data from "@/lib/portfolio-data.json";
 import Cubes from "./cubes";
 import './cubes.css';
-import TextTrail from "./text-trail";
 
 type HeroProps = {
   name: string;
@@ -29,32 +28,26 @@ export function Hero({ name }: HeroProps) {
         </div>
         
         <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center px-4 md:px-6">
-          <div className="h-24 md:h-32 lg:h-40 w-full">
-            <TextTrail 
-              text={name}
-              textColor="hsl(var(--primary))"
-              backgroundColor="transparent"
-              supersample={4}
-            />
-          </div>
-          <p className="mt-4 max-w-[700px] text-lg text-foreground/80 md:text-xl">
-            Web Developer, DevOps Engineer, and Game Developer. I create
-            beautiful, high-performance digital experiences.
-          </p>
-          <div className="mt-8 flex gap-4">
-            <Button asChild>
-              <a href={data.personal.linkedin_url} target="_blank" rel="noopener noreferrer">
-                <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
-              </a>
-            </Button>
-            <Button variant="secondary" asChild>
-              <a href={`mailto:${data.personal.email}`}>
-                <Mail className="mr-2 h-4 w-4" /> Contact Me
-              </a>
-            </Button>
-          </div>
+            <h1 className="font-headline text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-primary">
+                {name}
+            </h1>
+            <p className="mt-4 max-w-[700px] text-lg text-foreground/80 md:text-xl">
+                Web Developer, DevOps Engineer, and Game Developer. I create
+                beautiful, high-performance digital experiences.
+            </p>
+            <div className="mt-8 flex gap-4">
+                <Button asChild>
+                <a href={data.personal.linkedin_url} target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
+                </a>
+                </Button>
+                <Button variant="secondary" asChild>
+                <a href={`mailto:${data.personal.email}`}>
+                    <Mail className="mr-2 h-4 w-4" /> Contact Me
+                </a>
+                </Button>
+            </div>
         </div>
     </section>
   );
 }
-
