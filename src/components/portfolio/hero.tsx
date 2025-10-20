@@ -12,8 +12,8 @@ type HeroProps = {
 
 export function Hero({ name }: HeroProps) {
   return (
-    <section className="relative w-full py-20 md:py-32 lg:py-40 overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full">
+    <section className="relative w-full h-[50svh] min-h-[400px] md:h-[60svh] lg:h-[70svh] overflow-hidden">
+        <div className="absolute inset-0 z-0">
             <Cubes 
                 gridSize={12}
                 maxAngle={45}
@@ -25,23 +25,18 @@ export function Hero({ name }: HeroProps) {
                 autoAnimate={true}
                 rippleOnClick={true}
             />
+            <div className="absolute inset-0 bg-grid-white/[0.05] [mask-image:linear-gradient(to_bottom,white_5%,transparent_50%)]"></div>
         </div>
-        <div className="absolute top-0 left-0 w-full h-full bg-grid-white/[0.05] [mask-image:linear-gradient(to_bottom,white_5%,transparent_50%)]"></div>
-        <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
-        <div className="absolute -z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <div className="w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] bg-primary/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '5s' }}></div>
-        </div>
-
-      <div className="container relative z-10 px-4 md:px-6">
-        <div className="flex flex-col items-center text-center">
-            <div className="h-24 md:h-32 lg:h-40 w-full">
-               <TextTrail 
-                text={name}
-                textColor="hsl(var(--primary))"
-                backgroundColor="transparent"
-                supersample={4}
-              />
-            </div>
+        
+        <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center px-4 md:px-6">
+          <div className="h-24 md:h-32 lg:h-40 w-full">
+            <TextTrail 
+              text={name}
+              textColor="hsl(var(--primary))"
+              backgroundColor="transparent"
+              supersample={4}
+            />
+          </div>
           <p className="mt-4 max-w-[700px] text-lg text-foreground/80 md:text-xl">
             Web Developer, DevOps Engineer, and Game Developer. I create
             beautiful, high-performance digital experiences.
@@ -59,7 +54,7 @@ export function Hero({ name }: HeroProps) {
             </Button>
           </div>
         </div>
-      </div>
     </section>
   );
 }
+
