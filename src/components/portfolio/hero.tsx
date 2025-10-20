@@ -4,7 +4,6 @@ import { Mail, Linkedin } from "lucide-react";
 import data from "@/lib/portfolio-data.json";
 import Cubes from "./cubes";
 import './cubes.css';
-import DecryptedText from "./decrypted-text";
 
 type HeroProps = {
   name: string;
@@ -34,14 +33,7 @@ export function Hero({ name }: HeroProps) {
               {name}
             </h1>
             <p className="mt-4 max-w-[700px] text-lg text-foreground/80 md:text-xl">
-              <DecryptedText
-                text={subtitle}
-                animateOn="view"
-                speed={5}
-                maxIterations={subtitle.length}
-                sequential={true}
-                revealDirection="start"
-              />
+              {subtitle}
             </p>
             <div className="mt-8 flex gap-4">
                 <Button asChild>
