@@ -591,8 +591,127 @@ export const LaserFlow = ({
 
   return <div ref={mountRef} className={`laser-flow-container ${className || ''}`} style={style} />;
 };
+npx shadcn@latest add https://reactbits.dev/r/LaserFlow-JS-CSS
+'use client';
 
-export default LaserFlow;
+import * as React from 'react';
+import {
+  Radar,
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  PolarRadiusAxis,
+  ResponsiveContainer,
+} from 'recharts';
+
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { LaserFlow } from './laser-flow';
+
+type SkillsData = {
+  [key: string]: {
+    items: string[];
+    proficiency_score: number;
+  };
+};
+
+type SkillsProps = {
+  skills: SkillsData;
+};
+
+export function Skills({ skills }: SkillsProps) {
+  const chartData = Object.entries(skills).map(([key, value]) => ({
+    subject: key.replace(/_/g, ' & '),
+    score: value.proficiency_score,
+    fullMark: 100,
+  }));
+
+  const allSkills = Object.values(skills).flatMap(skill => skill.items);
+
+  return (
+    <section
+      id="skills"
+      className="py-16 md:py-24 bg-background relative overflow-hidden"
+    >
+      <div className="absolute top-0 left-0 w-full h-full z-0">
+        <LaserFlow color="hsl(var(--primary))" />
+      </div>
+      <div className="container px-4 md:px-6 relative z-10">
+        <div className="flex flex-col items-center text-center mb-12">
+          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">
+            Skills & Expertise
+          </h2>
+          <p className="mt-3 max-w-[700px] text-foreground/80 md:text-lg">
+            A visualization of my proficiency across different domains.
+          </p>
+        </div>
+
+        <div className="grid gap-8 md:grid-cols-5">
+          <Card className="md:col-span-3 bg-card/80 backdrop-blur-sm">
+            <CardHeader>
+              <CardTitle className="font-headline">Proficiency Radar</CardTitle>
+              <CardDescription>
+                A score out of 100 for each category.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ResponsiveContainer width="100%" height={400}>
+                <RadarChart
+                  cx="50%"
+                  cy="50%"
+                  outerRadius="80%"
+                  data={chartData}
+                >
+                  <PolarGrid stroke="hsl(var(--border))" />
+                  <PolarAngleAxis
+                    dataKey="subject"
+                    tick={{ fill: 'hsl(var(--foreground))', fontSize: 12 }}
+                  />
+                  <PolarRadiusAxis
+                    angle={30}
+                    domain={[0, 100]}
+                    tick={false}
+                    axisLine={false}
+                  />
+                  <Radar
+                    name="Proficiency"
+                    dataKey="score"
+                    stroke="hsl(var(--primary))"
+                    fill="hsl(var(--primary))"
+                    fillOpacity={0.4}
+                  />
+                </RadarChart>
+              </ResponsiveContainer>
+            </CardContent>
+          
+          <Card className="md:col-span-2 bg-card/80 backdrop-blur-sm">
+            <CardHeader>
+              <CardTitle className="font-headline">Technologies</CardTitle>
+              <CardDescription>
+                A tag cloud of all technologies I work with.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="flex flex-wrap gap-2">
+              {allSkills.map((item, index) => (
+                <Badge key={index} variant="secondary">
+                  {item}
+                </Badge>
+              ))}
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+the laser background is not transparent. how to fix?
 .laser-flow-container {
   width: 100%;
   height: 100%;
@@ -602,4 +721,17 @@ export default LaserFlow;
   z-index: 1;
   pointer-events: none;
 }
-I'm running into an issue with the code I provided. It's not working as expected. Can you help me fix it?
+I am getting this error too
+./src/components/portfolio/laser-flow.tsx:325:1
+Parsing ecmascript source code failed
+  323 |
+  324 | export default LaserFlow;
+> 325 |
+      | ^
+  326 |
+  327 |
+  328 | .laser-flow-container {
+
+Expression expected
+
+fix it

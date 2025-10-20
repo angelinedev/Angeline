@@ -83,3 +83,9 @@ export function Skills({ skills }: SkillsProps) {
                         <Badge key={index} variant="secondary">{item}</Badge>
                     ))}
                 </CardContent>
+            </Card>
+        </div>
+      </div>
+    </section>
+  );
+}
