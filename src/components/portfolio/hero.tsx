@@ -38,7 +38,7 @@ export function Hero({ name }: HeroProps) {
                <TextTrail 
                 text={name}
                 textColor="hsl(var(--primary))"
-                backgroundColor="hsl(var(--background))"
+                backgroundColor="transparent"
               />
             </div>
           <p className="mt-4 max-w-[700px] text-lg text-foreground/80 md:text-xl">
