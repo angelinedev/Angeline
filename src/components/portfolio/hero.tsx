@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Mail, Linkedin } from "lucide-react";
 import data from "@/lib/portfolio-data.json";
@@ -10,6 +11,7 @@ type HeroProps = {
 };
 
 export function Hero({ name }: HeroProps) {
+  const subtitle = "Web Developer, DevOps Engineer, and Game Developer. I create beautiful, high-performance digital experiences.";
   return (
     <section className="relative w-full h-[50svh] min-h-[400px] md:h-[60svh] lg:h-[70svh] overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -33,10 +35,10 @@ export function Hero({ name }: HeroProps) {
             </h1>
             <p className="mt-4 max-w-[700px] text-lg text-foreground/80 md:text-xl">
               <DecryptedText
-                text="Web Developer, DevOps Engineer, and Game Developer. I create beautiful, high-performance digital experiences."
+                text={subtitle}
                 animateOn="view"
                 speed={5}
-                maxIterations={text.length}
+                maxIterations={subtitle.length}
                 sequential={true}
                 revealDirection="start"
               />
