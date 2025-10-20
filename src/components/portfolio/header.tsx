@@ -8,9 +8,6 @@ export function Header() {
         <div className="mr-4 flex items-center">
           <a href="/" className="mr-6 flex items-center space-x-2">
             <Code className="h-6 w-6 text-primary" />
-            <span className="font-bold font-headline sm:inline-block">
-              Neon Architect
-            </span>
           </a>
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a
