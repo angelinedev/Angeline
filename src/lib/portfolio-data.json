@@ -1,0 +1,127 @@
+
+{
+  "personal": {
+    "name": "Angeline Hephzibah J",
+    "email": "angelinehephzibahj@gmail.com",
+    "location": "Chennai, Tamil Nadu, India",
+    "linkedin_url": "https://linkedin.com/in/angeline-h"
+  },
+  "projects": [
+    {
+      "title": "Technovanza Event Website",
+      "company_role": "Lead Developer at Jerusalem College of Engineering",
+      "date": "Sep 2025 - Oct 2025",
+      "description": "Led the development of the official website for Technovanza, the college's national technical symposium. Built with Vue.js, TypeScript, and Tailwind CSS, featuring a dynamic event schedule and registration system.",
+      "url": "https://github.com/your-username/technovanza-website",
+      "category": "Web Dev",
+      "hero_animation_type": "Particles.js",
+      "icon_emoji": "🎉",
+      "imageId": "technovanza",
+      "keywords": ["Vue.js", "TypeScript", "Tailwind CSS", "Firebase", "Event Management"]
+    },
+    {
+      "title": "Point of Sale (POS) System",
+      "company_role": "Full Stack Intern at SBV Technologies",
+      "date": "May 2025 - Aug 2025",
+      "description": "Developed and deployed a comprehensive POS system using Flask for the backend and a responsive Vue.js frontend. The system handled inventory management, sales tracking, and user authentication.",
+      "url": "https://github.com/your-username/sbv-pos",
+      "category": "Full Stack",
+      "hero_animation_type": "GSAP Scroll",
+      "icon_emoji": "💼",
+      "imageId": "sbv-pos",
+      "keywords": ["Flask", "Python", "Vue.js", "PostgreSQL", "REST API", "Docker"]
+    },
+    {
+      "title": "CI/CD Pipeline Automation",
+      "company_role": "DevOps Intern at TechForce",
+      "date": "Jan 2025 - Apr 2025",
+      "description": "Designed and implemented a complete CI/CD pipeline using Jenkins and Docker to automate the build, test, and deployment process for a suite of microservices, reducing deployment time by 40%.",
+      "url": "https://github.com/your-username/techforce-cicd",
+      "category": "DevOps",
+      "hero_animation_type": "3D Model",
+      "icon_emoji": "🚀",
+      "imageId": "techforce-ci-cd",
+      "keywords": ["Jenkins", "Docker", "Kubernetes", "AWS", "Microservices", "CI/CD"]
+    },
+    {
+      "title": "Headless CMS Platform",
+      "company_role": "Web Developer at Digamend",
+      "date": "Jun 2024 - Dec 2024",
+      "description": "Contributed to building a headless CMS for a digital marketing agency. Focused on creating a scalable backend with Node.js and a highly interactive admin dashboard using React and TypeScript.",
+      "url": "https://github.com/your-username/digamend-cms",
+      "category": "Web Dev",
+      "hero_animation_type": "GSAP Scroll",
+      "icon_emoji": "📝",
+      "imageId": "digamend-cms",
+      "keywords": ["Node.js", "React", "TypeScript", "GraphQL", "MongoDB"]
+    },
+    {
+      "title": "2D Pixel Art Platformer",
+      "company_role": "Personal Project",
+      "date": "Ongoing",
+      "description": "Developing a 2D retro-style platformer game in Unity using C#. The project focuses on procedural level generation and creating a compelling player physics engine from scratch.",
+      "url": "https://github.com/your-username/unity-platformer",
+      "category": "Game Dev",
+      "hero_animation_type": "3D Model",
+      "icon_emoji": "🎮",
+      "imageId": "unity-platformer",
+      "keywords": ["Unity", "C#", "Game Design", "Pixel Art", "Procedural Generation"]
+    },
+    {
+      "title": "Portfolio Website v1",
+      "company_role": "Personal Project",
+      "date": "2024",
+      "description": "My first personal portfolio website built with plain HTML, CSS, and JavaScript. It was a great learning experience in web development fundamentals and responsive design.",
+      "url": "https://github.com/your-username/portfolio-v1",
+      "category": "Web Dev",
+      "hero_animation_type": "Particles.js",
+      "icon_emoji": "🌐",
+      "imageId": "portfolio-v1",
+      "keywords": ["HTML", "CSS", "JavaScript", "Responsive Design"]
+    }
+  ],
+  "experience_timeline": [
+    {
+      "role": "Project Coordinator (Internship)",
+      "company": "TechForce",
+      "date": "Jan 2025 - Apr 2025",
+      "summary_points": [
+        "Assisted with development and deployment of a dashboard for product management.",
+        "Collaborated with cross-functional teams to define project requirements and timelines.",
+        "Tracked project milestones and deliverables, ensuring on-time completion."
+      ]
+    },
+    {
+      "role": "Volunteer",
+      "company": "Local Coding Bootcamp",
+      "date": "Summer 2024",
+      "summary_points": [
+        "Mentored junior developers and students in web development fundamentals.",
+        "Conducted code reviews and provided constructive feedback.",
+        "Helped organize workshops on topics like Git, Docker, and React."
+      ]
+    }
+  ],
+  "skills": {
+    "WebDevelopment": {
+      "items": ["Flask (backend)", "Vue.js + TypeScript", "React.js", "Tailwind CSS", "Node.js", "GraphQL"],
+      "proficiency_score": 90
+    },
+    "DevOps_Cloud": {
+      "items": ["Docker", "Kubernetes", "Jenkins", "AWS (EC2, S3)", "CI/CD", "Terraform"],
+      "proficiency_score": 85
+    },
+    "GameDevelopment": {
+      "items": ["Unity", "C#", "Blender", "Game Design Principles"],
+      "proficiency_score": 75
+    },
+    "Programming_Core": {
+      "items": ["Python", "JavaScript / TypeScript", "C++", "Java", "HTML/CSS", "SQL"],
+      "proficiency_score": 95
+    },
+    "Tools_Platforms": {
+      "items": ["Git & GitHub", "Postman", "Figma", "Jira", "Linux"],
+      "proficiency_score": 80
+    }
+  }
+}

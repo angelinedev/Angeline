@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "technovanza",
+      "description": "Technovanza Event Website",
+      "imageUrl": "https://images.unsplash.com/photo-1700936655679-83f4b37d7d74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0ZWNoJTIwZXZlbnR8ZW58MHx8fHwxNzYwOTQ0MjM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tech event"
+    },
+    {
+      "id": "sbv-pos",
+      "description": "Point of Sale System for SBV Technologies",
+      "imageUrl": "https://images.unsplash.com/photo-1726065235239-b20b88d43eea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwb3MlMjBzeXN0ZW18ZW58MHx8fHwxNzYwOTA3ODkwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pos system"
+    },
+    {
+      "id": "techforce-ci-cd",
+      "description": "CI/CD Pipeline for TechForce",
+      "imageUrl": "https://images.unsplash.com/photo-1634022472418-5052d9f70f84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkZXZvcHMlMjBwaXBlbGluZXxlbnwwfHx8fDE3NjA5MDIyOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "devops pipeline"
+    },
+    {
+      "id": "digamend-cms",
+      "description": "Content Management System for Digamend",
+      "imageUrl": "https://images.unsplash.com/photo-1742997734865-71d10c491be5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjbXMlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzYwOTU2OTI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cms dashboard"
+    },
+    {
+      "id": "unity-platformer",
+      "description": "2D Platformer Game in Unity",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1572392640988-ba48d1a74457?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwaXhlbCUyMGFydHxlbnwwfHx8fDE3NjA4NDU3OTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pixel art"
+    },
+    {
+      "id": "portfolio-v1",
+      "description": "Personal Portfolio Website v1",
+      "imageUrl": "https://images.unsplash.com/photo-1607431067517-fda93b3e0aee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29kZSUyMGFic3RyYWN0fGVufDB8fHx8MTc2MDg0MDY2MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "code abstract"
+    }
+  ]
 }
