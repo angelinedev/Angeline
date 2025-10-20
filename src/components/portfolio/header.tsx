@@ -1,3 +1,4 @@
+
 import { Code } from "lucide-react";
 
 export function Header() {
@@ -11,7 +12,7 @@ export function Header() {
               Neon Architect
             </span>
           </a>
-          <nav className="flex items-center gap-6 text-sm">
+          <nav className="hidden md:flex items-center gap-6 text-sm">
             <a
               href="#projects"
               className="transition-colors hover:text-foreground/80 text-foreground/60"
@@ -29,6 +30,18 @@ export function Header() {
               className="transition-colors hover:text-foreground/80 text-foreground/60"
             >
               Experience
+            </a>
+            <a
+              href="#certifications"
+              className="transition-colors hover:text-foreground/80 text-foreground/60"
+            >
+              Certifications
+            </a>
+             <a
+              href="#recent-posts"
+              className="transition-colors hover:text-foreground/80 text-foreground/60"
+            >
+              Posts
             </a>
           </nav>
         </div>

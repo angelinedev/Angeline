@@ -73,6 +73,7 @@
     {
       "role": "Intern",
       "company": "SBV Technologies",
+      "location": "Chennai, TN",
       "date": "July 2025",
       "summary_points": [
         "Explored foundational principles of full stack development by collaborating on projects spanning both front-end and back-end technologies within cross-functional teams."
@@ -81,6 +82,7 @@
     {
       "role": "Project Intern",
       "company": "TechForce",
+      "location": "Chennai, TN",
       "date": "June 2025",
       "summary_points": [
         "Assisted with the development and deployment of a project management dashboard by supporting sprint planning, tracking milestones, and facilitating communication among project stakeholders.",
@@ -90,9 +92,10 @@
     {
       "role": "Intern",
       "company": "Digamend",
+      "location": "Chennai",
       "date": "June 2024 - July 2024",
       "summary_points": [
-        "Developed a 2D game and a 3D endless runner, improving gameplay mechanics and coding efficiency, resulting in a 20% increase in user engagement.",
+        "Developed a 2D game and a 3D endless runner during an internship at Diagnmen, improving gameplay mechanics and coding efficiency, resulting in a 20% increase in user engagement.",
         "Collaborated with a team of 5 members to implement creative ideas, optimizing user experience and achieving a 15% reduction in gameplay bugs."
       ]
     }
@@ -122,5 +125,59 @@
         "items": ["Statistics", "NumPy", "pandas", "matplotlib"],
         "proficiency_score": 75
     }
-  }
+  },
+  "certifications": [
+    {
+      "title": "Foundation",
+      "issuer": "Indian Institutes of Technology",
+      "year": "2024"
+    },
+    {
+      "title": "Encrypt ID Competition",
+      "issuer": "Indian Institutes of Technology",
+      "year": "2024"
+    },
+    {
+      "title": "First Prize in Paper Presentation",
+      "issuer": "Indian Society for Technical Education (ISTE) Student Chapter",
+      "year": "2024"
+    }
+  ],
+  "posts": [
+    {
+      "title": "Cloud-Based Web App Deployment",
+      "date": "2 months ago",
+      "content": "I'm thrilled to share that I’ve successfully completed my second capstone project: \"Cloud-Based Web App Deployment & Resilience Simulation\", as part of my academic IT infrastructure paper. This project involved deploying a Weather Forecasting Web Application using modern DevOps and cloud-native tools.",
+      "url": "https://www.linkedin.com/posts/angeline-h_aws-devops-terraform-activity-7195847926210084864-d5-P",
+      "hashtags": ["AWS", "DevOps", "Terraform", "Jenkins", "CI/CD", "CloudComputing", "WeatherApp", "CapstoneProject", "CSE"]
+    },
+    {
+      "title": "Kimai Cloud Migration",
+      "date": "2 months ago",
+      "content": "Excited to share a project I recently completed: migrating the Kimai time-tracking application to a fully cloud-native architecture on AWS. This hands-on experience gave me a deep dive into cloud deployment, automation, and observability.",
+      "url": "https://www.linkedin.com/posts/angeline-h_devops-cloudcomputing-aws-activity-7195484839659020288-c-2s",
+      "hashtags": ["DevOps", "CloudComputing", "AWS", "Docker", "Terraform", "Jenkins", "Grafana", "Kimai", "InfrastructureAsCode", "StudentProjects", "Monitoring", "CI_CD"]
+    },
+    {
+      "title": "First Internship Experience",
+      "date": "11 months ago",
+      "content": "I'm thrilled to share my first-ever internship experience in the game development industry! I had the incredible opportunity to intern at DigAmenD Technology Pvt. Ltd., a game development business, from June 24 to July 19. It was rewarding and difficult to work on real game development projects in a professional setting.",
+      "url": "https://www.linkedin.com/posts/angeline-h_digamendtechnology-learningbydoing-internshipjourney-activity-7095066497262972928-aEaw",
+      "hashtags": ["DigamendTechnology", "LearningByDoing", "InternshipJourney", "WomenInTech", "GameDesign", "PassionInGaming", "BuildingTheFuture", "Unity", "GameDevelopment", "FirstInternship", "CareerMilestone"]
+    },
+    {
+      "title": "First Prize in Paper Presentation",
+      "date": "1 year ago",
+      "content": "I am absolutely thrilled and honored to have secured the FIRST prize in the Paper Presentation event organized by the Indian Society for Technical Education Student Chapter at Jerusalem College of Engineering! This achievement is not just a personal milestone but a testament to the hard work, dedication, and countless hours spent perfecting my presentation.",
+      "url": "https://www.linkedin.com/posts/angeline-h_victorylap-istestudentchapter-paperpresentationchampion-activity-7078315183424163840-HqA5",
+      "hashtags": ["VictoryLap", "ISTEStudentChapter", "PaperPresentationChampion", "EngineeringExcellence", "KeepPushingBoundaries"]
+    },
+    {
+      "title": "1st in ScreenKraft Competition",
+      "date": "1 year ago",
+      "content": "I am excited to announce that I secured the 1st position in the ScreenKraft competition at Darpan, organized by Aayam The IITM BS Drama Society. Scriptwriting has always been a passion of mine, and this recognition truly means a lot.",
+      "url": "https://www.linkedin.com/posts/angeline-h_scriptwriting-creativeachievement-darpan2024-activity-7075778841029304320-iO6c",
+      "hashtags": ["Scriptwriting", "CreativeAchievement", "Darpan2024", "IITMBS", "DramaSociety", "PassionToProfession"]
+    }
+  ]
 }

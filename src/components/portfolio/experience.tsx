@@ -1,8 +1,10 @@
+
 import { Briefcase } from "lucide-react";
 
 type ExperienceItem = {
   role: string;
   company: string;
+  location: string;
   date: string;
   summary_points: string[];
 };
@@ -38,7 +40,7 @@ export function Experience({ experience }: ExperienceProps) {
                     <div className={`md:p-6 p-4 rounded-lg bg-card border border-border/60 ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
                         <p className="text-sm text-foreground/60">{item.date}</p>
                         <h3 className="text-lg font-bold font-headline mt-1">{item.role}</h3>
-                        <p className="text-primary font-medium">{item.company}</p>
+                        <p className="text-primary font-medium">{item.company} &middot; {item.location}</p>
                         <ul className="mt-3 list-disc list-inside text-left text-sm text-foreground/80 space-y-1">
                             {item.summary_points.map((point, pIndex) => (
                                 <li key={pIndex}>{point}</li>
