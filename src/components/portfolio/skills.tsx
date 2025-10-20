@@ -12,6 +12,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { LaserFlow } from "./laser-flow";
 
 type SkillsData = {
   [key: string]: {
@@ -34,8 +35,11 @@ export function Skills({ skills }: SkillsProps) {
   const allSkills = Object.values(skills).flatMap(skill => skill.items);
 
   return (
-    <section id="skills" className="py-16 md:py-24 bg-background">
-      <div className="container px-4 md:px-6">
+    <section id="skills" className="py-16 md:py-24 bg-background relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full z-0">
+        <LaserFlow color="hsl(var(--primary))" />
+      </div>
+      <div className="container px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center text-center mb-12">
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">
             Skills & Expertise
@@ -46,7 +50,7 @@ export function Skills({ skills }: SkillsProps) {
         </div>
 
         <div className="grid gap-8 md:grid-cols-5">
-            <Card className="md:col-span-3">
+            <Card className="md:col-span-3 bg-card/80 backdrop-blur-sm">
                 <CardHeader>
                     <CardTitle className="font-headline">Proficiency Radar</CardTitle>
                     <CardDescription>A score out of 100 for each category.</CardDescription>
@@ -69,7 +73,7 @@ export function Skills({ skills }: SkillsProps) {
                 </CardContent>
             </Card>
 
-            <Card className="md:col-span-2">
+            <Card className="md:col-span-2 bg-card/80 backdrop-blur-sm">
                  <CardHeader>
                     <CardTitle className="font-headline">Technologies</CardTitle>
                     <CardDescription>A tag cloud of all technologies I work with.</CardDescription>
@@ -79,10 +83,3 @@ export function Skills({ skills }: SkillsProps) {
                         <Badge key={index} variant="secondary">{item}</Badge>
                     ))}
                 </CardContent>
-            </Card>
-        </div>
-
-      </div>
-    </section>
-  );
-}
