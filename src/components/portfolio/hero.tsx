@@ -3,7 +3,6 @@ import { Mail, Linkedin } from "lucide-react";
 import data from "@/lib/portfolio-data.json";
 import Cubes from "./cubes";
 import './cubes.css';
-import DecryptedText from "./decrypted-text";
 
 type HeroProps = {
   name: string;
@@ -32,11 +31,7 @@ export function Hero({ name }: HeroProps) {
               {name}
             </h1>
             <p className="mt-4 max-w-[700px] text-lg text-foreground/80 md:text-xl">
-              <DecryptedText
-                text="Web Developer, DevOps Engineer, and Game Developer. I create beautiful, high-performance digital experiences."
-                animateOn="view"
-                revealDirection="center"
-              />
+              Web Developer, DevOps Engineer, and Game Developer. I create beautiful, high-performance digital experiences.
             </p>
             <div className="mt-8 flex gap-4">
                 <Button asChild>
