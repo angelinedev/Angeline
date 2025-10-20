@@ -19,44 +19,47 @@ import {
 
 import './text-trail.css';
 
-const hexToRgb = (hex: string) => {
+const hexToRgb = (hex: string): [number, number, number] => {
+  if (hex.startsWith('hsl(')) {
+    const hslValues = hex.match(/(\d+(\.\d+)?)/g);
+    if (!hslValues || hslValues.length < 3) {
+      return [255, 255, 255];
+    }
+    
+    const h = parseFloat(hslValues[0]);
+    const s = parseFloat(hslValues[1]) / 100;
+    const l = parseFloat(hslValues[2]) / 100;
+    
+    const c = (1 - Math.abs(2 * l - 1)) * s;
+    const x = c * (1 - Math.abs((h / 60) % 2 - 1));
+    const m = l - c / 2;
+    
+    let r = 0, g = 0, b = 0;
+    if (h >= 0 && h < 60) {
+      r = c; g = x; b = 0;
+    } else if (h >= 60 && h < 120) {
+      r = x; g = c; b = 0;
+    } else if (h >= 120 && h < 180) {
+      r = 0; g = c; b = x;
+    } else if (h >= 180 && h < 240) {
+      r = 0; g = x; b = c;
+    } else if (h >= 240 && h < 300) {
+      r = x; g = 0; b = c;
+    } else if (h >= 300 && h < 360) {
+      r = c; g = 0; b = x;
+    }
+    
+    return [Math.round((r + m) * 255), Math.round((g + m) * 255), Math.round((b + m) * 255)];
+  }
+
   let h = hex.replace('#', '');
-  if (h.length === 3)
-    h = h
-      .split('')
-      .map(c => c + c)
-      .join('');
-  if (h.startsWith('hsl(')) {
-      const hsl = h.replace('hsl(','').replace(')','').split(' ').map(s => parseFloat(s.replace('%', '')));
-        let H = hsl[0];
-        let S = hsl[1] / 100;
-        let L = hsl[2] / 100;
-        
-        let C = (1 - Math.abs(2 * L - 1)) * S;
-        let X = C * (1 - Math.abs((H / 60) % 2 - 1));
-        let m = L - C/2;
-        let r = 0, g = 0, b = 0;
-        if (0 <= H && H < 60) {
-            r = C; g = X; b = 0;
-        } else if (60 <= H && H < 120) {
-            r = X; g = C; b = 0;
-        } else if (120 <= H && H < 180) {
-            r = 0; g = C; b = X;
-        } else if (180 <= H && H < 240) {
-            r = 0; g = X; b = C;
-        } else if (240 <= H && H < 300) {
-            r = X; g = 0; b = C;
-        } else if (300 <= H && H < 360) {
-            r = C; g = 0; b = X;
-        }
-        r = Math.round((r + m) * 255);
-        g = Math.round((g + m) * 255);
-        b = Math.round((b + m) * 255);
-        return [r,g,b];
+  if (h.length === 3) {
+    h = h.split('').map(c => c + c).join('');
   }
   const n = parseInt(h, 16);
   return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
 };
+
 const loadFont = async (fam: string) => {
   if ('fonts' in document) await document.fonts.load(`64px "${fam}"`);
 };
@@ -142,7 +145,7 @@ type TextTrailProps = {
   animateColor?: boolean;
   startColor?: string;
   textColor?: string;
-  backgroundColor?: string | number;
+  backgroundColor?: string;
   colorCycleInterval?: number;
   supersample?: number;
 };
@@ -158,7 +161,7 @@ const TextTrail = ({
   animateColor = false,
   startColor = '#ffffff',
   textColor = '#ffffff',
-  backgroundColor = 0x271e37,
+  backgroundColor = 'transparent',
   colorCycleInterval = 3000,
   supersample = 2
 }: TextTrailProps) => {
@@ -180,12 +183,9 @@ const TextTrail = ({
     
     let bgColor = new Color(0x000000);
     let bgAlpha = 0;
-    if (typeof backgroundColor === 'string') {
+    if (backgroundColor !== 'transparent') {
         const rgb = hexToRgb(backgroundColor);
         bgColor = new Color(rgb[0]/255, rgb[1]/255, rgb[2]/255);
-        bgAlpha = 1;
-    } else if (typeof backgroundColor === 'number') {
-        bgColor = new Color(backgroundColor);
         bgAlpha = 1;
     }
     
@@ -245,22 +245,24 @@ const TextTrail = ({
       texCanvas.height = canvasSize;
       texCanvas.style.width = `${max}px`;
       texCanvas.style.height = `${max}px`;
+      
+      if (!ctx) return;
 
-      ctx!.setTransform(1, 0, 0, 1, 0, 0);
-      ctx!.scale(pixelRatio, pixelRatio);
-      ctx!.clearRect(0, 0, max, max);
-      ctx!.imageSmoothingEnabled = true;
-      ctx!.imageSmoothingQuality = 'high';
-      ctx!.shadowColor = 'rgba(255,255,255,0.3)';
-      ctx!.shadowBlur = 2;
-      ctx!.fillStyle = '#fff';
-      ctx!.textAlign = 'center';
-      ctx!.textBaseline = 'middle';
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.scale(pixelRatio, pixelRatio);
+      ctx.clearRect(0, 0, max, max);
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high';
+      ctx.shadowColor = 'rgba(255,255,255,0.3)';
+      ctx.shadowBlur = 2;
+      ctx.fillStyle = '#fff';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
 
       const refSize = 250;
-      ctx!.font = `${fontWeight} ${refSize}px ${fontFamily}`;
-      const width = ctx!.measureText(text).width;
-      ctx!.font = `${fontWeight} ${(refSize * max) / width}px ${fontFamily}`;
+      ctx.font = `${fontWeight} ${refSize}px ${fontFamily}`;
+      const width = ctx.measureText(text).width;
+      ctx.font = `${fontWeight} ${(refSize * max) / width}px ${fontFamily}`;
 
       const cx = max / 2,
         cy = max / 2;
@@ -275,9 +277,9 @@ const TextTrail = ({
         [0.1, -0.1],
         [-0.1, 0.1]
       ];
-      ctx!.globalAlpha = 1 / offs.length;
-      offs.forEach(([dx, dy]) => ctx!.fillText(text, cx + dx, cy + dy));
-      ctx!.globalAlpha = 1;
+      ctx.globalAlpha = 1 / offs.length;
+      offs.forEach(([dx, dy]) => ctx.fillText(text, cx + dx, cy + dy));
+      ctx.globalAlpha = 1;
 
       const tex = new CanvasTexture(texCanvas);
       tex.generateMipmaps = true;
@@ -316,7 +318,7 @@ const TextTrail = ({
     ro.observe(ref.current);
 
     const timer = setInterval(() => {
-      if (!textColor) {
+      if (animateColor && !textColor) {
         targetColor.current = [Math.random(), Math.random(), Math.random()];
       }
     }, colorCycleInterval);
@@ -345,16 +347,13 @@ const TextTrail = ({
       renderer.render(scene, cam);
       [rt0, rt1] = [rt1, rt0];
     });
-
+    const currentRef = ref.current;
     return () => {
       renderer.setAnimationLoop(null);
       clearInterval(timer);
-      if (ref.current) {
-        ref.current.removeEventListener('pointermove', onMove as EventListener);
-      }
+      currentRef?.removeEventListener('pointermove', onMove as EventListener);
       ro.disconnect();
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      if(ref.current) ref.current.removeChild(renderer.domElement);
+      if(currentRef) currentRef.removeChild(renderer.domElement);
       renderer.dispose();
       rt0.dispose();
       rt1.dispose();
@@ -383,3 +382,5 @@ const TextTrail = ({
 };
 
 export default TextTrail;
+
+    
