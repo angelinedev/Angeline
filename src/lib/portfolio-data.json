@@ -3,125 +3,124 @@
   "personal": {
     "name": "Angeline Hephzibah J",
     "email": "angelinehephzibahj@gmail.com",
+    "phone": "8778331142",
     "location": "Chennai, Tamil Nadu, India",
     "linkedin_url": "https://linkedin.com/in/angeline-h"
   },
   "projects": [
     {
       "title": "Technovanza Event Website",
-      "company_role": "Lead Developer at Jerusalem College of Engineering",
+      "company_role": "Jerusalem College of Engineering",
       "date": "Sep 2025 - Oct 2025",
-      "description": "Led the development of the official website for Technovanza, the college's national technical symposium. Built with Vue.js, TypeScript, and Tailwind CSS, featuring a dynamic event schedule and registration system.",
-      "url": "https://github.com/your-username/technovanza-website",
+      "description": "Developed the official Sympo-25 (Technovanza) event website using React and Vite, focusing on a modern, fast user interface. Implemented key event features, posters and an updated FAQ, along with a responsive background animation (using particles.js) for visual appeal.",
+      "url": "https://technovanza.vercel.app/",
       "category": "Web Dev",
       "hero_animation_type": "Particles.js",
       "icon_emoji": "🎉",
       "imageId": "technovanza",
-      "keywords": ["Vue.js", "TypeScript", "Tailwind CSS", "Firebase", "Event Management"]
+      "keywords": ["React", "Vite", "particles.js", "UI/UX"]
     },
     {
-      "title": "Point of Sale (POS) System",
-      "company_role": "Full Stack Intern at SBV Technologies",
-      "date": "May 2025 - Aug 2025",
-      "description": "Developed and deployed a comprehensive POS system using Flask for the backend and a responsive Vue.js frontend. The system handled inventory management, sales tracking, and user authentication.",
-      "url": "https://github.com/your-username/sbv-pos",
-      "category": "Full Stack",
+      "title": "Rapture Twelve - Cybersecurity Website",
+      "company_role": "Rapture Twelve (R12)",
+      "date": "Jul 2025 - Jul 2025",
+      "description": "Designed and deployed the Rapture Twelve (R12) corporate website with a high-end, responsive frontend featuring a blue/black aesthetic and GSAP animations. Secured the site with a Node.js/Express.js backend API, implementing rate limiting and input validation for a production-ready contact form system.",
+      "url": "https://www.rapturetwelve.com/",
+      "category": "Web Dev",
       "hero_animation_type": "GSAP Scroll",
-      "icon_emoji": "💼",
-      "imageId": "sbv-pos",
-      "keywords": ["Flask", "Python", "Vue.js", "PostgreSQL", "REST API", "Docker"]
+      "icon_emoji": "🛡️",
+      "imageId": "rapture-twelve",
+      "keywords": ["Node.js", "Express.js", "GSAP", "Security", "Frontend"]
     },
     {
-      "title": "CI/CD Pipeline Automation",
-      "company_role": "DevOps Intern at TechForce",
-      "date": "Jan 2025 - Apr 2025",
-      "description": "Designed and implemented a complete CI/CD pipeline using Jenkins and Docker to automate the build, test, and deployment process for a suite of microservices, reducing deployment time by 40%.",
-      "url": "https://github.com/your-username/techforce-cicd",
+      "title": "Parking App",
+      "company_role": "Indian Institute of Technology",
+      "date": "May 2025 - Jul 2025",
+      "description": "Developed a full-stack web application using Flask and SQLite to manage vehicle parking for users and administrators. Implemented user authentication, parking lot CRUD operations, real-time reservation management, and admin dashboards with data visualizations.",
+      "url": "https://github.com/23f3004447/Parking-App.git",
+      "category": "Full Stack",
+      "hero_animation_type": "None",
+      "icon_emoji": "🚗",
+      "imageId": "sbv-pos",
+      "keywords": ["Flask", "SQLite", "Full Stack", "Admin Dashboard"]
+    },
+    {
+      "title": "Kimai Cloud Migration Project",
+      "company_role": "TechForce",
+      "date": "Jun 2025 - Jun 2025",
+      "description": "Provisioned cloud infrastructure using Terraform with EC2, S3, IAM, and security groups. Automated deployment via Jenkins with Docker image builds and EC2 deployment. Secured & monitored the setup with a Bastion host, IAM roles, and CloudWatch logging.",
+      "url": "https://github.com/angelinedev/Cloud-Migration-Project.git",
       "category": "DevOps",
       "hero_animation_type": "3D Model",
       "icon_emoji": "🚀",
       "imageId": "techforce-ci-cd",
-      "keywords": ["Jenkins", "Docker", "Kubernetes", "AWS", "Microservices", "CI/CD"]
+      "keywords": ["Terraform", "AWS", "Jenkins", "Docker", "CI/CD"]
     },
     {
-      "title": "Headless CMS Platform",
-      "company_role": "Web Developer at Digamend",
-      "date": "Jun 2024 - Dec 2024",
-      "description": "Contributed to building a headless CMS for a digital marketing agency. Focused on creating a scalable backend with Node.js and a highly interactive admin dashboard using React and TypeScript.",
-      "url": "https://github.com/your-username/digamend-cms",
-      "category": "Web Dev",
-      "hero_animation_type": "GSAP Scroll",
-      "icon_emoji": "📝",
-      "imageId": "digamend-cms",
-      "keywords": ["Node.js", "React", "TypeScript", "GraphQL", "MongoDB"]
-    },
-    {
-      "title": "2D Pixel Art Platformer",
-      "company_role": "Personal Project",
-      "date": "Ongoing",
-      "description": "Developing a 2D retro-style platformer game in Unity using C#. The project focuses on procedural level generation and creating a compelling player physics engine from scratch.",
-      "url": "https://github.com/your-username/unity-platformer",
+      "title": "3D Endless Runner",
+      "company_role": "DigAmenD Technology Pvt. Ltd.",
+      "date": "Jul 2024 - Jul 2024",
+      "description": "Designed and implemented the 3D environment, including terrain and obstacles, using Unity, enhancing visual quality. Developed player mechanics (running, jumping, sliding) with C#, improving control responsiveness. Optimized game performance, increasing frame rates and reducing lag.",
+      "url": "https://drive.google.com/drive/folders/18OiZZV5NWApWy5fCb8X1YxuLb0gmGD9d?usp=sharing",
       "category": "Game Dev",
       "hero_animation_type": "3D Model",
-      "icon_emoji": "🎮",
+      "icon_emoji": "🏃",
       "imageId": "unity-platformer",
-      "keywords": ["Unity", "C#", "Game Design", "Pixel Art", "Procedural Generation"]
-    },
-    {
-      "title": "Portfolio Website v1",
-      "company_role": "Personal Project",
-      "date": "2024",
-      "description": "My first personal portfolio website built with plain HTML, CSS, and JavaScript. It was a great learning experience in web development fundamentals and responsive design.",
-      "url": "https://github.com/your-username/portfolio-v1",
-      "category": "Web Dev",
-      "hero_animation_type": "Particles.js",
-      "icon_emoji": "🌐",
-      "imageId": "portfolio-v1",
-      "keywords": ["HTML", "CSS", "JavaScript", "Responsive Design"]
+      "keywords": ["Unity", "C#", "Game Design", "Performance Optimization"]
     }
   ],
   "experience_timeline": [
     {
-      "role": "Project Coordinator (Internship)",
-      "company": "TechForce",
-      "date": "Jan 2025 - Apr 2025",
+      "role": "Intern",
+      "company": "SBV Technologies",
+      "date": "July 2025",
       "summary_points": [
-        "Assisted with development and deployment of a dashboard for product management.",
-        "Collaborated with cross-functional teams to define project requirements and timelines.",
-        "Tracked project milestones and deliverables, ensuring on-time completion."
+        "Explored foundational principles of full stack development by collaborating on projects spanning both front-end and back-end technologies within cross-functional teams."
       ]
     },
     {
-      "role": "Volunteer",
-      "company": "Local Coding Bootcamp",
-      "date": "Summer 2024",
+      "role": "Project Intern",
+      "company": "TechForce",
+      "date": "June 2025",
       "summary_points": [
-        "Mentored junior developers and students in web development fundamentals.",
-        "Conducted code reviews and provided constructive feedback.",
-        "Helped organize workshops on topics like Git, Docker, and React."
+        "Assisted with the development and deployment of a project management dashboard by supporting sprint planning, tracking milestones, and facilitating communication among project stakeholders.",
+        "Supported DevOps engineering initiatives in cloud computing environments by integrating automated deployment pipelines, enhancing system reliability and scalability for project management solutions."
+      ]
+    },
+    {
+      "role": "Intern",
+      "company": "Digamend",
+      "date": "June 2024 - July 2024",
+      "summary_points": [
+        "Developed a 2D game and a 3D endless runner, improving gameplay mechanics and coding efficiency, resulting in a 20% increase in user engagement.",
+        "Collaborated with a team of 5 members to implement creative ideas, optimizing user experience and achieving a 15% reduction in gameplay bugs."
       ]
     }
   ],
   "skills": {
-    "WebDevelopment": {
-      "items": ["Flask (backend)", "Vue.js + TypeScript", "React.js", "Tailwind CSS", "Node.js", "GraphQL"],
+    "Programming": {
+      "items": ["C", "C++", "Python", "Java", "Flask", "SQL", "JavaScript", "HTML", "CSS"],
       "proficiency_score": 90
     },
-    "DevOps_Cloud": {
-      "items": ["Docker", "Kubernetes", "Jenkins", "AWS (EC2, S3)", "CI/CD", "Terraform"],
+    "WebDevelopment": {
+      "items": ["Flask (backend)", "Vue.js + TypeScript", "Tailwind CSS", "REST APIs", "Jinja2 templating"],
       "proficiency_score": 85
     },
     "GameDevelopment": {
-      "items": ["Unity", "C#", "Blender", "Game Design Principles"],
-      "proficiency_score": 75
+      "items": ["Unity", "Unreal Engine"],
+      "proficiency_score": 80
     },
-    "Programming_Core": {
-      "items": ["Python", "JavaScript / TypeScript", "C++", "Java", "HTML/CSS", "SQL"],
-      "proficiency_score": 95
+    "DevOps_Cloud": {
+      "items": ["AWS EC2", "S3", "CloudWatch", "Load Balancers", "IAM", "WAF", "Terraform", "Jenkins CI/CD", "Docker"],
+      "proficiency_score": 88
     },
     "Tools_Platforms": {
-      "items": ["Git & GitHub", "Postman", "Figma", "Jira", "Linux"],
-      "proficiency_score": 80
+      "items": ["VS Code", "Git & GitHub", "Postman", "Firebase", "Redis", "Celery", "MySQL", "SQLite", "Canva", "Figma"],
+      "proficiency_score": 92
+    },
+    "DataScience": {
+        "items": ["Statistics", "NumPy", "pandas", "matplotlib"],
+        "proficiency_score": 75
     }
   }
 }
